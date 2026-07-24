@@ -48,6 +48,11 @@ cuando alguien **supera una velocidad** o **llega/sale de un lugar** que tú def
 **Sirve para:** coordinar equipos en la calle (repartos, técnicos, transporte) y recibir
 avisos sin estar mirando la pantalla.
 
+![Monitoreo en vivo (demo)](img/5-monitoreo-demo.gif)
+
+> ☝️ El marcador se mueve mostrando la velocidad en tiempo real y, al superar el límite,
+> salta la alerta a la derecha.
+
 ![Monitoreo en vivo](img/3-monitoreo-vivo.png)
 
 ![Alertas por evento](img/4-alertas.png)
