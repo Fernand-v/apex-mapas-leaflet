@@ -2,7 +2,7 @@
 
 # Map Kit for Oracle APEX
 
-**Three ready-to-use maps, built with free software and no paid plugins.**
+**Five ready-to-use map tools, built with free software and no paid plugins.**
 
 If you work with [Oracle APEX](https://apex.oracle.com) and ever wanted to add a map to your
 application (to locate customers, track attendance by zone, or see your team in real time),
@@ -13,7 +13,7 @@ this kit saves you weeks of work. All the code is here, explained step by step.
 
 ---
 
-## What's included (3 maps)
+## What's included (5 tools)
 
 ### 1. Portfolio map
 A map where you pin places (customers, branches, points of interest) grouped by color-coded
@@ -59,6 +59,33 @@ alerts without staring at the screen.
 
 ---
 
+### 4. Sketches and areas
+Draw **polygons, lines, circles and rectangles** on the map. It **measures the surface**
+(m2, hectares, km2) and **distance**, stores each shape as **GeoJSON** in your database, and
+answers a key question: **does this point fall inside an area?** You can also **import and
+export GeoJSON**.
+
+**Use it for:** delivery zones, land plots, sales coverage, worksite areas, agriculture.
+
+![Sketches and areas](img/6-areas.png)
+
+---
+
+### 5. Routes and navigation
+Build a **route with several stops** (by clicking or picking them from the portfolio), compute
+the **road path** with distance and estimated time, **optimize the stop order**, and **open it
+in Google Maps** to navigate. You can **save** routes, **export** them, and **compare the
+planned route against the actual track** (it highlights the deviation).
+
+**Use it for:** deliveries, technician visits, transport, field logistics.
+
+![Routes and navigation](img/7-rutas.png)
+
+> Road routing uses the free public [OSRM](https://project-osrm.org) service. If it is not
+> available, the route automatically falls back to a straight line.
+
+---
+
 ## Requirements
 
 To use this kit you need:
@@ -86,6 +113,8 @@ the files in the [`sql/`](sql/) folder:
    - Portfolio map: `10_...` and `11_...`
    - Geofence: `20_...` and `21_...`
    - Live tracking: `30_...`, `31_...`, `32_...` (and optionally `33_...` for push notifications).
+   - Sketches and areas: `40_...` and `41_...`
+   - Routes and navigation: `50_...` and `51_...`
 
 Every file can be re-run without breaking anything (they are idempotent).
 

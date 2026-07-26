@@ -50,3 +50,29 @@ La geocerca usa las mismas ideas pero tiene su propio conjunto de páginas más 
 Su código de base de datos está en [`../sql/20_geocerca_tablas.sql`](../sql/20_geocerca_tablas.sql)
 y [`../sql/21_geocerca_paquetes.sql`](../sql/21_geocerca_paquetes.sql). Si te interesa esa parte,
 escríbeme y te paso el detalle de las páginas.
+
+---
+
+## Croquis y áreas (página propia)
+
+1. **Blank Page** con una región **Static Content** vacía, Static ID = `areaHost`.
+2. Dos regiones **Inline Dialog** (Modal) vacías, cada una con una sub-región Static Content:
+   - Diálogo `dlgForm` → host `formHost` (datos del área)
+   - Diálogo `dlgImport` → host `impHost` (importar GeoJSON)
+3. Pega [`js/areas.js`](js/areas.js) en **Function and Global Variable Declaration** de la página.
+4. Proceso **AJAX** (Execute Code / PL-SQL): `AREA000.AJAX;`
+
+Usa **leaflet-geoman** (dibujo) y **turf.js** (medidas y punto-en-área), ambos por CDN gratuito.
+
+## Rutas y navegación (página propia)
+
+1. **Blank Page** con una región **Static Content** vacía, Static ID = `rutHost`.
+2. Tres regiones **Inline Dialog** (Modal) vacías, cada una con su sub-región host:
+   - `dlgPort` → `portHost` (elegir paradas del portafolio)
+   - `dlgReal` → `realHost` (pegar el recorrido real a comparar)
+   - `dlgGuard` → `guardHost` (guardar la ruta)
+3. Pega [`js/rutas.js`](js/rutas.js) en **Function and Global Variable Declaration**.
+4. Proceso **AJAX** (Execute Code / PL-SQL): `RUT000.AJAX;`
+
+El cálculo por calle usa el servicio público **OSRM** (fetch a `router.project-osrm.org`).
+No requiere clave; si no responde, la ruta cae a línea recta.

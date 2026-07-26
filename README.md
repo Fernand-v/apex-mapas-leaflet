@@ -2,7 +2,7 @@
 
 # Kit de Mapas para Oracle APEX
 
-**Tres mapas listos para usar, hechos con software libre y sin plugins de pago.**
+**Cinco herramientas de mapas listas para usar, hechas con software libre y sin plugins de pago.**
 
 Si trabajas con [Oracle APEX](https://apex.oracle.com) y alguna vez quisiste poner un mapa
 en tu aplicación (para ubicar clientes, controlar asistencia por zona o ver a tu equipo en
@@ -14,7 +14,7 @@ paso a paso y en español.
 
 ---
 
-## Qué incluye (3 mapas)
+## Qué incluye (5 herramientas)
 
 ### 1. Mapa de portafolio
 Un mapa donde marcas lugares (clientes, sucursales, puntos de interés) clasificados por
@@ -61,6 +61,33 @@ avisos sin estar mirando la pantalla.
 
 ---
 
+### 4. Croquis y áreas
+Dibuja **polígonos, líneas, círculos y rectángulos** sobre el mapa. El sistema **mide la
+superficie** (m², hectáreas, km²) y la **distancia**, guarda cada figura como **GeoJSON** en
+tu base de datos, y responde una pregunta clave: **¿este punto cae dentro de un área?**
+También puedes **importar y exportar GeoJSON**.
+
+**Sirve para:** zonas de reparto, terrenos, cobertura comercial, áreas de obra, agricultura.
+
+![Croquis y áreas](img/6-areas.png)
+
+---
+
+### 5. Rutas y navegación
+Arma una **ruta con varias paradas** (haciendo clic o eligiéndolas del portafolio), calcula el
+**camino por calle** con distancia y tiempo estimado, **optimiza el orden** de las paradas, y
+la **abre en Google Maps** para navegar. Puedes **guardar** rutas, **exportarlas**, y
+**comparar la ruta planificada contra el recorrido real** (te marca el desvío).
+
+**Sirve para:** repartos, visitas técnicas, transporte, logística de campo.
+
+![Rutas y navegación](img/7-rutas.png)
+
+> El cálculo de calles usa el servicio público gratuito de [OSRM](https://project-osrm.org).
+> Si no está disponible, la ruta cae automáticamente a línea recta.
+
+---
+
 ## Requisitos
 
 Para usar este kit necesitas:
@@ -88,6 +115,8 @@ los archivos de la carpeta [`sql/`](sql/):
    - Mapa de portafolio: `10_...` y `11_...`
    - Geocerca: `20_...` y `21_...`
    - Monitoreo en vivo: `30_...`, `31_...`, `32_...` (y opcionalmente `33_...` para las notificaciones push).
+   - Croquis y áreas: `40_...` y `41_...`
+   - Rutas y navegación: `50_...` y `51_...`
 
 Cada archivo se puede volver a ejecutar sin romper nada (son "idempotentes").
 
