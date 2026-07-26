@@ -81,6 +81,8 @@ la **abre en Google Maps** para navegar. Puedes **guardar** rutas, **exportarlas
 
 **Sirve para:** repartos, visitas técnicas, transporte, logística de campo.
 
+![Rutas y navegación (demo)](img/8-rutas-demo.gif)
+
 ![Rutas y navegación](img/7-rutas.png)
 
 > El cálculo de calles usa el servicio público gratuito de [OSRM](https://project-osrm.org).

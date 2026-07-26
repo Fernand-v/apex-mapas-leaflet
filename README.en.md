@@ -79,6 +79,8 @@ planned route against the actual track** (it highlights the deviation).
 
 **Use it for:** deliveries, technician visits, transport, field logistics.
 
+![Routes and navigation (demo)](img/8-rutas-demo.gif)
+
 ![Routes and navigation](img/7-rutas.png)
 
 > Road routing uses the free public [OSRM](https://project-osrm.org) service. If it is not
